@@ -112,7 +112,7 @@ class DatasetFormer:
             terrain_counts[terrain_type] = terrain_counts.get(terrain_type, 0) + 1
         
         dominant_terrain = max(terrain_counts, key=terrain_counts.get) if terrain_counts else "unknown"
-        
+
         return {
             "terrain_type": dominant_terrain,
             "objects": nearby_features,
